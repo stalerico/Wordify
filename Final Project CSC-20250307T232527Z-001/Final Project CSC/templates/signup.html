@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='signin.css') }}">
+</head>
+<body>
+    <div class="login-container">
+         <!-- a message to let users know it was a successful sign up -->
+         {% with messages = get_flashed_messages() %}
+         {% if messages %}
+             <div class="alert">
+                 {% for message in messages %}
+                     <p>{{ message }}</p>
+                 {% endfor %}
+             </div>
+         {% endif %}
+     {% endwith %}
+        <!-- User inputs their information in order to signup -->
+        <h1>Sign Up to Wordify</h1>
+        <form action="{{ url_for('signup') }}" method="POST">
+            <div class="input-container">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="input-container">
+                <label for="email">Email:</label>
+                <input type="text" id="email" name="email" required>
+            </div>
+            <div class="input-container">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <p>Already have an account? <a href="{{ url_for('login') }}">Log in</a></p>
+            <div class="button-container">
+                <button type="submit" class="custom-button">Sign up</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

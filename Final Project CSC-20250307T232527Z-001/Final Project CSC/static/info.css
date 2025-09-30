@@ -1,0 +1,183 @@
+
+body {
+    background-color: #ffe2e6;
+    font-family: 'Nanum Gothic', sans-serif;  
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background-color: #ffe2e6;  
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    border-radius: 0;  
+    transition: background-color 0.5s ease; 
+}
+
+
+.navbar-item {
+    background-color: #ffe2e6;  
+    color: #a1606d;
+    border-radius: 0;  
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 1.1rem;
+    position: relative;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    z-index: 1;  
+}
+
+
+.navbar-item:hover {
+    background-color: #a1606d;  
+    color: white;  
+}
+
+
+.navbar:hover {
+    background-color: pink;  
+}
+
+
+.navbar-item::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 180%; 
+    height: 150%;
+    background-color: #ffe2e6; 
+    z-index: -1;
+    transform: translate(-50%, -50%) scale(0);  
+    transform-origin: center center;
+    transition: transform 0.3s ease; 
+}
+
+
+h1 {
+    font-family: 'Nanum Gothic', sans-serif !important;
+    font-size: 2.5rem;
+    color: #d26b82;
+    margin-top: 80px; 
+    margin-bottom: 40px;
+}
+
+a {
+    text-decoration: none;
+    color: #d26b82;  
+    transition: color 0.3s ease;
+}
+
+.info-container {
+    font-family: 'Nanum Gothic', sans-serif !important;
+    background-color: #f9c8d0;  
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+}
+
+
+.personal-info {
+    font-family: 'Nanum Gothic', sans-serif;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; 
+    align-items: center;
+}
+
+label {
+    font-size: 1.1rem;
+    color: #d26b82;  
+    text-align: left;
+    width: 100%;
+}
+
+input[type="text"], input[type="email"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #d26b82;  
+    border-radius: 5px;
+    background-color: #ffe2e6;  
+    font-size: 1rem;
+    color: #a1606d;  
+}
+
+input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus {
+    border-color: #a1606d;  
+    outline: none;
+}
+
+
+button {
+    background-color: #a1606d;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #d26b82;  
+}
+
+
+.flash-messages {
+    margin-top: 80px;
+    padding: 20px;
+    width: 100%;
+    max-width: 500px;
+    background-color: #ffe2e6;
+    border: 1px solid #a1606d;
+    border-radius: 10px;
+    color: #a1606d;
+    text-align: center;
+}
+
+.flash {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.flash.success {
+    background-color: #a1606d;
+    color: white;
+}
+
+.flash.error {
+    background-color: #ffcccc;
+    color: #d26b82;
+}
+
+@media (max-width: 768px) {
+    .info-container {
+        width: 90%;
+        padding: 20px;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+    .personal-info {
+        gap: 15px;
+    }
+}

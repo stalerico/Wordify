@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='Account.css') }}">
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <a href="{{ url_for('homepage') }}" class="navbar-item special">Home</a>
+        <a href="{{ url_for('account') }}" class="navbar-item special">Account</a>
+        <a href="{{ url_for('wordify') }}" class="navbar-item special">Wordify</a>
+        <a href="{{ url_for('contact') }}" class="navbar-item special">Contact</a>
+    </div>
+
+    <!-- Account Section -->
+    <div class="account-container">
+        <h1>Account</h1>
+        <div class="account-info">
+            <p>Welcome, <span class="username">{{ username }}</span>!</p>
+            <p>Manage your account and settings:</p>
+            <ul>
+                <li><a href="{{ url_for('info') }}" class="button">Personal information</a></li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+</html>

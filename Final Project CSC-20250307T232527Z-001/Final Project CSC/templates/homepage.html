@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+ 
+    <link rel="stylesheet" href="{{ url_for('static', filename='homepage.css') }}">
+</head>
+<body>
+    <!-- This creates the animation when users first open the website! -->
+    <h1 class="typing">Welcome to Wordify</h1>
+   
+    <div class="button-container">
+        <!-- Login button -->
+        <a href="{{ url_for('login') }}">
+            <button class="custom-button">Login</button>
+        </a>
+ 
+        <!-- Sign Up Button -->
+        <a href="{{ url_for('signup') }}">
+            <button class="custom-button">Sign Up</button>
+        </a>
+    </div>
+</body>
+</html>

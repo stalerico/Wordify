@@ -1,0 +1,298 @@
+.navbar a {
+    text-decoration: none;
+}
+
+
+body {
+    background-color: #ffe2e6;
+    font-family: 'Nanum Gothic', sans-serif;
+    text-align: center;
+    color: #a1606d;
+    margin-top: 80px;
+}
+
+body p {
+    margin: 0; 
+    padding: 0; 
+    margin-bottom: 5px;
+    line-height: 1.2;
+}
+
+
+h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 4rem;
+    color: #a1606d;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background-color: #ffe2e6; 
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    border-radius: 0; 
+    transition: background-color 0.5s ease;
+}
+
+
+.navbar-item {
+    background-color: #ffe2e6; 
+    color: #a1606d;
+    border-radius: 0; 
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 1.1rem;
+    position: relative;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    z-index: 1; 
+}
+
+
+.navbar:hover .navbar-item {
+    background-color: pink; 
+    color: #a1606d; 
+}
+
+
+.navbar:hover {
+    background-color: pink; 
+    left: 0;  
+    width: 100%;
+}
+
+
+.navbar-item:hover {
+    background-color: #a1606d; 
+    color: white; 
+}
+
+
+.navbar-item.special:hover {
+    background-color: #a1606d;
+    color: white;
+}
+
+
+.navbar-item::before {
+    content: '';
+    position: absolute;
+    top: 50%;  
+    left: 50%;  
+    width: 180%; 
+    height: 150%;
+    background-color: #ffe2e6; 
+    z-index: -1;
+    transform: translate(-50%, -50%) scale(0);  
+    transform-origin: center center;
+    transition: transform 0.3s ease; 
+}
+
+
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; 
+}
+
+
+.custom-button {
+    text-decoration-style: none;
+    display: inline-block;
+    background-color: pink;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 10px 20px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 16px;
+    font-family: 'Nanum Gothic', sans-serif;
+    transition: background-color 0.3s ease;
+}
+
+a.custom-button {
+    text-decoration: none !important;
+}
+
+.custom-button:hover {
+    background-color: #a1606d;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+#fileNameDisplay {
+    font-size: 14px;
+    color: #333;
+}
+
+.highlight {
+    background-color: pink;
+    font-weight: bold;
+}
+
+
+.download-container {
+    margin-top: 30px;
+}
+
+.download-container a.custom-button {
+    margin-top: 10px;
+}
+
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 30px;
+    width: 90%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    flex-wrap: wrap;
+}
+
+/* Left and Right Columns */
+.right-column {
+    width: 48%;
+    padding: 20px;
+    border: 1px solid #ffe2e6;
+    box-sizing: border-box;
+    font-family: 'Nanum Gothic', sans-serif;
+    color: #a1606d;
+    background-color: #ffe2e6;
+    border-radius: 8px;
+    text-align: left;
+}
+
+/* Make the left-column content editable */
+.left-column {
+    width: 48%;
+    padding: 20px;
+    border: 1px solid #ffe2e6;
+    box-sizing: border-box;
+    font-family: 'Nanum Gothic', sans-serif;
+    color: #a1606d;
+    background-color: #ffe2e6;
+    border-radius: 8px;
+    text-align: left;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.left-column[contenteditable="true"] {
+    outline: 2px dashed #a1606d;
+    background-color: #f9f9f9;
+}
+
+/* Extend Button Styling (matches existing button styles) */
+.extend-button {
+    display: block;
+    margin-top: 20px;
+    background-color: pink;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'Nanum Gothic', sans-serif;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.extend-button:hover {
+    background-color: #a1606d;
+}
+
+
+/* Styling for the pink box */
+.pink-box {
+    width: 100%;
+    height: 450px;
+    overflow-y: auto;
+    background-color: #ffd3da;
+    padding: 20px;
+    border-radius: 8px;
+    font-family: 'Nanum Gothic', sans-serif;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+/* Textarea Styling */
+textarea {
+    width: 90%;
+    height: 120%;
+    padding: 10px;
+    font-size: 16px;
+    line-height: 1.5;
+    border: 1px solid #ffd3da;
+    resize: none;
+    background-color: #ffd3da;
+    font-family: 'Nanum Gothic', sans-serif;
+    color: #a1606d;
+}
+
+/* Submit Button Styling */
+input[type="submit"] {
+    background-color: pink;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+input[type="submit"]:hover {
+    background-color: #a1606d;
+}
+
+/* File Upload Container */
+.file-upload-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+/* File Name Display */
+.file-display {
+    display: inline-block;
+    width: 250px;
+    height: 40px;
+    line-height: 40px;
+    border: 1px solid #ffd3da;
+    border-radius: 50px;
+    padding: 0 15px;
+    font-size: 14px;
+    color: #ffd3da;
+    background-color: #ffd3da;
+    text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* Responsive Design cause we're inclusive */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; 
+        width: 100%;
+    }
+
+    .left-column, .right-column {
+        width: 100%;
+    }
+}
